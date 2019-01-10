@@ -25,23 +25,26 @@ class PlayerInput extends React.Component {
   }
 
   render() {
+    const { username } = this.state;
+    const { label } = this.props;
+
     return (
       <form className='column' onSubmit={this.handleSubmit}>
         <label className='header' htmlFor='username'>
-          {this.props.label}          
+          {label}          
         </label>
         <input 
           id='username' 
           placeholder='GitHub username' 
           type='text' 
           autoComplete='off' 
-          value={this.state.username} 
+          value={username} 
           onChange={this.handleChange} 
         />
         <button 
           className='button' 
           type='submit' 
-          disabled={!this.state.username}>
+          disabled={!username}>
             Submit
         </button>
       </form>
@@ -90,11 +93,8 @@ class Battle extends React.Component {
   };
 
   render() {
-    const playerOneName = this.state.playerOneName;
-    const playerTwoName = this.state.playerTwoName;
-    const playerOneImage = this.state.playerOneImage;
-    const playerTwoImage = this.state.playerTwoImage;
-    const match = this.props.match;
+    const { playerOneName, playerTwoName, playerOneImage, playerTwoImage } = this.state;
+    const { match } = this.props;
 
     return (
       <div>
