@@ -2,8 +2,6 @@
 
 This project was created with webpack.
 
-The demo for this project can be found at https://snvtahoe.github.io/github-battle/.
-
 ## Available Scripts
 
 ### `npm start`
